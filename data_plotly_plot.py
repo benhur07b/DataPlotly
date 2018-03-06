@@ -582,21 +582,6 @@ class Plot(object):
                 }
             }
 
-        // violin plot
-        else if(data.points[i].data.type == 'violin'){
-            dd["uid"] = data.points[i].data.uid
-            dd["type"] = data.points[i].data.type
-            dd["field"] = data.points[i].data.customdata
-
-                // correct axis orientation (for violin is viceversa)
-                if(data.points[i].data.orientation == 'v'){
-                    dd["id"] = data.points[i].y
-                }
-                else {
-                    dd["id"] = data.points[i].x
-                }
-            }
-
         // bar plot
         else if(data.points[i].data.type == 'bar'){
             dd["uid"] = data.points[i].data.uid
